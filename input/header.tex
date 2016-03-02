@@ -17,7 +17,7 @@
 %%% Для работы с русскими текстами (расстановки переносов)
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}
-
+\defaultfontfeatures{Mapping=tex-text}
 %\newfontfamily{\cyrillicfontt}{GOST_B}
 %\set{GOST_type_A}
 \setmainfont{GOST_type_A}
@@ -29,7 +29,7 @@
 \newfontfamily{\cyrillicfontt}{GOST_type_A}
 \newfontfamily{\cyrillicfonttt}{GOST_type_A}
 
-\defaultfontfeatures{Mapping=tex-text}
+
 %\defaultfontfeatures{Scale=MatchLowercase} %--несобирается
 
 \setkeys{russian}{babelshorthands=true}
