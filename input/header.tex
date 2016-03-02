@@ -7,35 +7,25 @@
 
 %%% Для работы шрифтов
 \usepackage{xunicode,xltxtra}
-%%%% Ставим Times New Roman - как основной шрифт
-%\setmainfont[Mapping=tex-text]{DejaVuSerif}
-%%%% Courier New - для моноширного текста
-%\setmonofont[Scale=MatchLowercase]{DejaVuSansMono}
-
 
 \usepackage{fontspec}
-%%% Для работы с русскими текстами (расстановки переносов)
+%%% Для работы с русскими текстами (расстановки переносов, последовательность комманд строго обязательна)
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}
-\defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Mapping=tex-text} % Для того чтобы работали стандартные сочетания символов ---, --, << >> и т.п.
 %\newfontfamily{\cyrillicfontt}{GOST_B}
 %\set{GOST_type_A}
-\setmainfont{GOST_type_A}
+\setmainfont{GOST_type_A} % Ставим как основной шрифт
 \setsansfont{GOST_type_A}
 \setmonofont{GOST_type_A}
-%\newfontfamily\russianfont
 
 \newfontfamily{\cyrillicfont}{GOST_type_A}
 \newfontfamily{\cyrillicfontt}{GOST_type_A}
 \newfontfamily{\cyrillicfonttt}{GOST_type_A}
 
 
-%\defaultfontfeatures{Scale=MatchLowercase} %--несобирается
-
-%\setkeys{russian}{babelshorthands=true}
 
 
-%%% Для того чтобы работали стандартные сочетания символов ---, --, << >> и т.п.
 %\defaultfontfeatures{Mapping=tex-text}
 
 %%% Для работы со сложными формулами
