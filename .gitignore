@@ -20,6 +20,8 @@
 *.lot
 *.maf
 *.mtc
-*.mtc1
+*.mtc
 *.out
+*.fls
 *.synctex.gz
+*.fdb_latexmk
