@@ -23,5 +23,6 @@
 *.mtc
 *.out
 *.fls
+*.xdv
 *.synctex.gz
 *.fdb_latexmk
