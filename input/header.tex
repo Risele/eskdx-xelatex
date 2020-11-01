@@ -8,20 +8,21 @@
 %%% Для работы шрифтов
 \usepackage{xunicode,xltxtra}
 
-\usepackage{fontspec}
 %%% Для работы с русскими текстами (расстановки переносов, последовательность комманд строго обязательна)
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}
 \defaultfontfeatures{Mapping=tex-text} % Для того чтобы работали стандартные сочетания символов ---, --, << >> и т.п.
 %\newfontfamily{\cyrillicfontt}{GOST_B}
 %\set{GOST_type_A}
-\setmainfont{GOST_type_A} % Ставим как основной шрифт
-\setsansfont{GOST_type_A}
-\setmonofont{GOST_type_A}
+\setmainfont{GOST_type_A}
+\setromanfont{GOST_type_A} 
+\setsansfont{GOST_type_A} 
+\setmonofont{GOST_type_A} 
 
-\newfontfamily{\cyrillicfont}{GOST_type_A}
-\newfontfamily{\cyrillicfontt}{GOST_type_A}
+\newfontfamily{\cyrillicfont}{GOST_type_A} 
+\newfontfamily{\cyrillicfontrm}{GOST_type_A}
 \newfontfamily{\cyrillicfonttt}{GOST_type_A}
+\newfontfamily{\cyrillicfontsf}{GOST_type_A}
 
 %\defaultfontfeatures{Mapping=tex-text}
 
