@@ -1,6 +1,7 @@
 %%% Здесь выбираются необходимые графы
 \documentclass[russian,utf8,pointsection,nocolumnsxix,nocolumnxxxi,nocolumnxxxii]{eskdtext}
 \usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text} % Для того чтобы работали стандартные сочетания символов ---, --, << >> и т.п.
 
 %%% Что бы работал eskdx и некоторые другие пакеты LaTeX
 \usepackage{xecyr}
@@ -9,9 +10,8 @@
 \usepackage{xunicode,xltxtra}
 
 %%% Для работы с русскими текстами (расстановки переносов, последовательность комманд строго обязательна)
-\usepackage{polyglossia}
-\setdefaultlanguage{russian}
-\defaultfontfeatures{Mapping=tex-text} % Для того чтобы работали стандартные сочетания символов ---, --, << >> и т.п.
+% \usepackage{polyglossia}
+% \setdefaultlanguage{russian}
 %\newfontfamily{\cyrillicfontt}{GOST_B}
 %\set{GOST_type_A}
 \setmainfont{GOST_type_A}
@@ -19,11 +19,11 @@
 \setsansfont{GOST_type_A} 
 \setmonofont{GOST_type_A} 
 
-\newfontfamily{\cyrillicfont}{GOST_type_A} 
-\newfontfamily{\cyrillicfontrm}{GOST_type_A}
-\newfontfamily{\cyrillicfonttt}{GOST_type_A}
-\newfontfamily{\cyrillicfontsf}{GOST_type_A}
-
+% polyglossia only
+% \newfontfamily\cyrillicfont{GOST_type_A} 
+% \newfontfamily\cyrillicfontrm{GOST_type_A}
+% \newfontfamily\cyrillicfonttt{GOST_type_A}
+% \newfontfamily\cyrillicfontsf{GOST_type_A}
 %\defaultfontfeatures{Mapping=tex-text}
 
 %%% Для работы со сложными формулами
