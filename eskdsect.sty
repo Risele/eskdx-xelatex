@@ -123,13 +123,39 @@
 
 \newcommand{\ESKD@point@style@section}{
   \newcounter{point}[section]
-  \renewcommand{\thepoint}{\thesection\ifnum\value{point}>0 .\arabic{point}\fi}
-  \renewcommand{\theHpoint}{\theHsection\ifnum\value{point}>0 .\arabic{point}\fi}}
+  \renewcommand{\thepoint}{\thesection.\arabic{point}}
+  \renewcommand{\theHpoint}{\theHsection.\arabic{point}}}
 
-\newcommand{\ESKD@point@style@subsection}{
-  \newcounter{point}[subsection]
-  \renewcommand{\thepoint}{\thesubsection.\arabic{point}}
-  \renewcommand{\theHpoint}{\theHsubsection.\arabic{point}}}
+
+
+%\newcommand{\ESKD@point@style@subsection}{
+%  \newcounter{point}[subsection]
+%  \renewcommand{\thepoint}{\thesubsection.\arabic{point}}
+%  \renewcommand{\theHpoint}{\theHsubsection.\arabic{point}}}
+%
+
+
+\newcommand{\ESKD@point@style@subsection}{%
+  \newcounter{point}[subsection]%
+  % Дополнительно сбрасываем point при переходе к новому разделу,
+  % чтобы в разделах без подразделов нумерация начиналась заново.
+  \@addtoreset{point}{section}%
+  % Условный вывод номера: если есть подразделы — X.s.Y, иначе — X.Y
+  \renewcommand{\thepoint}{%
+    \ifnum\value{subsection}>0
+      \thesubsection.\arabic{point}%
+    \else
+      \thesection.\arabic{point}%
+    \fi}%
+  % Согласованный формат для гиперссылок/якорей
+  \renewcommand{\theHpoint}{%
+    \ifnum\value{subsection}>0
+      \theHsubsection.\arabic{point}%
+    \else
+      \theHsection.\arabic{point}%
+    \fi}%
+}
+
 
 \@nameuse{ESKD@point@style@\ESKD@point@style}
 \newcounter{subpoint}[point]
